@@ -1,0 +1,42 @@
+{
+  "name": "pocangularjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusmagalhaes22/Angular_ACT_POC.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mateusmagalhaes22/Angular_ACT_POC/issues"
+  },
+  "homepage": "https://github.com/mateusmagalhaes22/Angular_ACT_POC#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "1.0.30",
+    "angular": "1.8.2",
+    "angular-animate": "^1.8.3",
+    "bootstrap": "4.6.1",
+    "jquery": "3.5.1",
+    "npm": "8.11"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "3.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-template": "^5.0.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-uglifycss": "1.0.8",
+    "gulp-watch": "4.3.11",
+    "gulp-webserver": "0.9.1",
+    "run-sequence": "2.2.0"
+  }
+}

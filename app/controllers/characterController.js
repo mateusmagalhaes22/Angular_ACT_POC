@@ -1,7 +1,7 @@
-angular.module("app").controller("CharacterController");
-function CharacterController() {
+angular.module("app", []).controller("CharacterController", function CharacterController(Characters) {
     const characterController = this;
-    characterController.listByNameStartsWith = () => {
-        
+    characterController.characterList = []
+    characterController.search = (nome) => {
+        this.characterList.push(Characters.listar(nome))
     }
-}
+})

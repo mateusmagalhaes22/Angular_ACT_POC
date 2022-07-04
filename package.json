@@ -20,7 +20,7 @@
     "@uirouter/angularjs": "1.0.30",
     "angular": "1.8.2",
     "angular-animate": "^1.8.3",
-    "bootstrap": "4.6.1",
+    "bootstrap": "^4.6.1",
     "jquery": "3.5.1",
     "npm": "8.11"
   },

@@ -14,8 +14,14 @@
 <body>
     <h1>App Marvel</h1>
     <div ng-controller="CharacterController as ctrl">
-        <input type="text" placeholder="Search Character" ng-model="ctrl.characterName">
-        <button ng-click="ctrl.Search">Search</button>
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search Character" aria-label="Search" ng-model="ctrl.characterName">
+                <button class="btn btn-outline-success" type="submit" ng-click="ctrl.Search">Search</button>
+              </form>
+            </div>
+          </nav>
         <p ng-repeat="character in ctrl.characterList"></p>
     </div>
 </body>

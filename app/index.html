@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style src="../app/style.css"></style>
     <script src="../node_modules/angular/angular.min.js"></script>
-    <script src="../app/characterService.js" name="ctrl"></script>
     <script src="../app/characterController.js"></script>
     <title>App Marvel</title>
 </head>
@@ -15,7 +15,7 @@
             <div class="container-fluid">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search Character" aria-label="Search" ng-model="ctrl.characterName">
-                <button class="btn btn-outline-success" type="submit" ng-click="ctrl.search(srvc)">Search</button>
+                <button class="btn-search" type="submit" ng-mouseover="mouseover" ng-click="ctrl.search(srvc)">Search</button>
               </form>
             </div>
           </nav>

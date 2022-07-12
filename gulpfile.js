@@ -33,7 +33,7 @@ gulp.task("app.html", () => {
 
 gulp.task("app.css", () => {
   return gulp
-    .src(["app/**/*.css", "assets/css/**/*.css"])
+    .src(["app/*.css", "assets/css/**/*.css"])
     .pipe(uglifycss({ uglyComments: true }))
     .pipe(concat("app.min.css"))
     .pipe(gulp.dest("dist/assets/css"));
@@ -57,7 +57,7 @@ gulp.task("app.js", () => {
 });
 
 gulp.task("app.assets", () => {
-  return gulp.src("assets/**/*.*").pipe(gulp.dest("dist/assets"));
+  return gulp.src("../Angular_ACT_POC/app/assets/**/*.*").pipe(gulp.dest("dist/assets"));
 });
 
 gulp.task("deps", ["deps.js", "deps.css"]);

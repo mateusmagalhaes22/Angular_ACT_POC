@@ -1,1 +1,32 @@
-<html ng-app="marvelApp"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><style src="../app/style.css"></style><script src="../node_modules/angular/angular.min.js"></script><script src="../app/characterController.js"></script><title>App Marvel</title></head><body><h1>App Marvel</h1><div ng-controller="CharacterController as ctrl" ng-service="Characters as srvc"><nav class="navbar bg-light"><div class="container-fluid"><form class="d-flex" role="search"><input class="form-control me-2" type="search" placeholder="Search Character" aria-label="Search" ng-model="ctrl.characterName"> <button class="btn-search" type="submit" ng-mouseover="mouseover" ng-click="ctrl.search(srvc)">Search</button></form></div></nav><p ng-repeat="character in ctrl.characterList">{{character}}</p></div></body></html>
+<html ng-app="marvelApp"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body {
+        background-color: coral;
+      }
+      .dropdown {
+        border: #ffbb00;
+        border-radius: 5px;
+        position: relative;
+        display: inline-block;
+        background-color: red;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        border-radius: 5px;
+        background-color: #ffbb00;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .form-control {
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+      }
+      .btn-search {
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+      }</style><script src="../node_modules/angular/angular.min.js"></script><script src="../app/characterController.js"></script><title>App Marvel</title></head><body><img src="../dist/assets/logo_marvel.png" alt="" width="100%" height="80%"><div class="application"></div><h1>App Marvel</h1><div ng-controller="CharacterController as ctrl"><nav class="navbar bg-light"><div class="container-fluid"><form class="d-flex" role="search"><input class="form-control" type="search" placeholder="Search Character" aria-label="Search" size="50px" ng-model="ctrl.characterName"> <button class="btn-search" type="submit" ng-mouseover="mouseover" ng-click="ctrl.search()">Search</button></form></div></nav><p class="characters" ng-repeat="character in ctrl.characterList"></p><div class="dropdown"><span>{{character.name}}</span><div class="dropdown-content"><img src="{{character.thumbnail.path}}/" alt=""><p>{{character.description}}</p></div></div><p></p></div></body></html>

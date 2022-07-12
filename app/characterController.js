@@ -2,7 +2,7 @@ angular.module("marvelApp", []).controller("CharacterController", function($q, $
     const characterController = this;
     characterController.characterName = '';
     characterController.characterList = [];
-    characterController.search = function(service) {
+    characterController.search = function() {
         characterController.characterList = [];
         characterController.characterList.push(characterController.listar(characterController.characterName));
     };

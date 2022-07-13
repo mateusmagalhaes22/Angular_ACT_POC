@@ -3,9 +3,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+      <link rel="stylesheet" href="style.css">
+    -->
     <style>
+      /*
+        por algum motivo, o css no arquivo separado não funciona
+      */
       body {
+        background-color: rgb(224, 224, 224);
+      }
+      header {
+        text-align: center;
         background-color: coral;
+        
+        width: 100%;
+        height: 10%;
       }
       .dropdown {
         border: #ffbb00;
@@ -42,13 +55,12 @@
     <title>App Marvel</title>
 </head>
 <body>
-  <div class="application"></div>
-    <h1>App Marvel</h1>
+  <header>App Marvel</header>
     <div ng-controller="CharacterController as ctrl">
         <nav class="navbar bg-light">
             <div class="container-fluid">
               <form class="d-flex" role="search">
-                <input class="form-control" type="search" placeholder="Search Character" aria-label="Search" size="50px" ng-model="ctrl.characterName">
+                <br><input class="form-control" type="search" placeholder="Search Character" aria-label="Search" size="50px" ng-model="ctrl.characterName">
                 <button class="btn-search" type="submit" ng-mouseover="mouseover" ng-click="ctrl.search()">Search</button>
               </form>
             </div>

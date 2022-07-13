@@ -43,11 +43,7 @@ gulp.task("app.js", () => {
   return (
     gulp
       .src([
-        "app/app.module.js",
-        "app/env/**/*.js",
-        "app/config/**/*.js",
-        "app/public/**/*.js",
-        "app/shared/**/*.js",
+        "app/characterController.js",
       ])
       .pipe(babel({ presets: ["env"] }))
       // .pipe(uglify())
